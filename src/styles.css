@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fdbb2d, #b21f1f); /* Degradado rojo-amarillo para tema claro */
+    min-height: 100vh;
+    color: white;
+}
+
+.container {
+    max-width: 100%; /* Allow full width for responsive grid */
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem; /* Reduced margin for more space */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.language-selector {
+    margin-top: 1rem;
+}
+
+#language-select,
+.timezone-select-item,
+.converter-inputs input[type="time"],
+.converter-inputs select {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333; /* Default text color for light theme */
+    cursor: pointer;
+}
+
+/* Dark Theme adjustments for select elements */
+body.dark-theme #language-select,
+body.dark-theme .timezone-select-item,
+body.dark-theme .converter-inputs input[type="time"],
+body.dark-theme .converter-inputs select {
+    background: rgba(0, 0, 0, 0.5);
+    color: #f0f0f0; /* Text color for dark theme */
+}
+
+.settings-controls {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.settings-controls button {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.settings-controls button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #f0f0f0;
+}
+
+body.dark-theme .clock-item,
+body.dark-theme .timezone-converter {
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .analog-clock {
+    border-color: #f0f0f0;
+}
+
+body.dark-theme .hand,
+body.dark-theme .center-dot {
+    background: #f0f0f0;
+}
+
+body.dark-theme .second {
+    background: #ff6b6b;
+}
+
+.clocks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.clock-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clock-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.timezone-select-item {
+    flex-grow: 1;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.remove-clock-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.remove-clock-btn:hover {
+    background: #cc0000;
+}
+
+.clock-display {
+    text-align: center;
+    width: 100%;
+}
+
+.digital-clock .time {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.digital-clock .date {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    opacity: 0.9;
+}
+
+.digital-clock .city {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+#add-clock-btn {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#add-clock-btn:hover {
+    background: #45a049;
+}
+
+.analog-clock {
+    width: 150px;
+    height: 150px;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin: 1.5rem auto 0;
+    position: relative;
+}
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    background: white;
+    border-radius: 5px;
+}
+
+.hour {
+    width: 3px;
+    height: 45px;
+    margin-left: -1.5px;
+}
+
+.minute {
+    width: 2px;
+    height: 65px;
+    margin-left: -1px;
+}
+
+.second {
+    width: 1px;
+    height: 70px;
+    margin-left: -0.5px;
+    background: red;
+}
+
+.center-dot {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .clocks-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .digital-clock .time {
+        font-size: 2.5rem;
+    }
+    
+    .digital-clock .date {
+        font-size: 1rem;
+    }
+}
+
+.timezone-converter {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.timezone-converter h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.converter-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.converter-inputs input[type="time"],
+.converter-inputs select {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    cursor: pointer;
+}
+
+.converter-inputs span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#convert-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#convert-btn:hover {
+    background: #0056b3;
+}
+
+.converter-result p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
