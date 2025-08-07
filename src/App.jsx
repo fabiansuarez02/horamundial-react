@@ -46,7 +46,7 @@ function App() {
   useEffect(() => {
     const fetchTimezones = async () => {
       try {
-        const response = await fetch('http://worldtimeapi.org/api/timezone');
+                const response = await fetch('https://worldtimeapi.org/api/timezone');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
