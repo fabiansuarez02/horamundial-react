@@ -1,52 +1,52 @@
-# World Clock React App
+# Aplicación de Reloj Mundial en React
 
-This is a simple world clock application built with React and Vite. It allows you to view the current time in different time zones around the world.
+Esta es una aplicación sencilla de reloj mundial construida con React y Vite. Te permite ver la hora actual en diferentes zonas horarias de todo el mundo.
 
-## Features
+## Características
 
-*   **Multiple Clocks:** Display multiple clocks for different time zones.
-*   **Timezone Converter:** Convert time from one timezone to another.
-*   **Analog and Digital Clocks:** View time in both analog and digital formats.
-*   **Customization:**
-    *   Add and remove clocks.
-    *   Switch between 12-hour and 24-hour formats.
-    *   Toggle between light and dark themes.
-    *   Language selection (English and Spanish).
-*   **Persistent Settings:** Your preferences are saved in your browser's local storage.
+*   **Múltiples Relojes:** Muestra varios relojes para diferentes zonas horarias.
+*   **Convertidor de Zona Horaria:** Convierte la hora de una zona horaria a otra.
+*   **Relojes Analógicos y Digitales:** Visualiza la hora tanto en formato analógico como digital.
+*   **Personalización:**
+    *   Añade y elimina relojes.
+    *   Cambia entre formatos de 12 y 24 horas.
+    *   Alterna entre temas claro y oscuro.
+    *   Selección de idioma (inglés y español).
+*   **Configuración Persistente:** Tus preferencias se guardan en el almacenamiento local de tu navegador.
 
-## Getting Started
+## Cómo Empezar
 
-### Prerequisites
+### Prerrequisitos
 
-*   Node.js (v14 or later)
-*   npm or yarn
+*   Node.js (v14 o superior)
+*   npm o yarn
 
-### Installation
+### Instalación
 
-1.  Clone the repository:
+1.  Clona el repositorio:
     ```bash
     git clone https://github.com/your-username/horamundial-react.git
     ```
-2.  Navigate to the project directory:
+2.  Navega al directorio del proyecto:
     ```bash
     cd horamundial-react
     ```
-3.  Install the dependencies:
+3.  Instala las dependencias:
     ```bash
     npm install
     ```
 
-### Running the Application
+### Ejecutar la Aplicación
 
-To start the development server, run:
+Para iniciar el servidor de desarrollo, ejecuta:
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+Abre [http://localhost:5173](http://localhost:5173) para verla en el navegador.
 
-## Technologies Used
+## Tecnologías Utilizadas
 
 *   [React](https://reactjs.org/)
 *   [Vite](https://vitejs.dev/)
