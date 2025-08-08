@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './styles.css'; // Import your global CSS
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function App() {
   const [allTimezones, setAllTimezones] = useState([]);
@@ -356,6 +357,7 @@ function App() {
         currentLang={currentLang}
         timezoneDisplayNames={timezoneDisplayNames}
       />
+      <SpeedInsights />
     </div>
   );
 }
