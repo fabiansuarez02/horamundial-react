@@ -348,7 +348,7 @@ function App() {
             />
           ))}
         </div>
-
+        <SpeedInsights />
         <button id="add-clock-btn" onClick={addClock}>{translations[currentLang].addClock}</button>
       </main>
 
@@ -357,7 +357,6 @@ function App() {
         currentLang={currentLang}
         timezoneDisplayNames={timezoneDisplayNames}
       />
-      <SpeedInsights />
     </div>
   );
 }
